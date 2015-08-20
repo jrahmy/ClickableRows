@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<addon addon_id="jrahmy_clickableRows" title="Clickable Rows" version_string="3.0.0" version_id="300" url="https://xenforo.com/community/resources/clickable-rows.1024/" install_callback_class="" install_callback_method="" uninstall_callback_class="" uninstall_callback_method="">
+  <admin_navigation/>
+  <admin_permissions/>
+  <admin_style_properties/>
+  <admin_templates/>
+  <admin_template_modifications/>
+  <code_events/>
+  <code_event_listeners>
+    <listener event_id="file_health_check" execute_order="10" callback_class="Jrahmy\ClickableRows\Listener" callback_method="fileHealthCheck" active="1" hint="" description="Adds file hashes to health check"/>
+  </code_event_listeners>
+  <cron/>
+  <email_templates/>
+  <email_template_modifications/>
+  <optiongroups/>
+  <permissions>
+    <permission_groups/>
+    <permissions/>
+    <interface_groups/>
+  </permissions>
+  <phrases>
+    <phrase title="style_property_jrahmy_clickableRows_highlightColor_description_master" version_id="300" version_string="3.0.0"><![CDATA[The color used to highlight a clickable row on mouse-hover.]]></phrase>
+    <phrase title="style_property_jrahmy_clickableRows_highlightColor_master" version_id="300" version_string="3.0.0"><![CDATA[Clickable Rows Highlight Color]]></phrase>
+  </phrases>
+  <route_prefixes/>
+  <style_properties>
+    <property property_name="jrahmy_clickableRows_highlightColor" property_type="scalar" definition="1" group_name="general" title="Clickable Rows Highlight Color" description="The color used to highlight a clickable row on mouse-hover." css_components="" scalar_type="color" scalar_parameters="" display_order="410" sub_group=""><![CDATA[@inlineMod]]></property>
+  </style_properties>
+  <templates>
+    <template title="jrahmy_clickableRows.css" version_id="300" version_string="3.0.0"><![CDATA[li.node div.nodeInfo:hover,
+li.discussionListItem:hover,
+li.memberListItem:hover,
+li.searchResult:hover
+{
+	cursor: pointer;
+}
+
+li.node:not(.category) div.nodeInfo:hover,
+li.discussionListItem:hover,
+li.discussionListItem:hover .stats,
+li.discussionListItem:hover .posterAvatar,
+li.memberListItem:hover,
+li.searchResult:hover
+{
+	background-color: {xen:property jrahmy_clickableRows_highlightColor};
+	
+}]]></template>
+  </templates>
+  <public_template_modifications>
+    <modification template="page_container_js_body" modification_key="jrahmy_clickableRows_require" description="Adds JS and CSS via a XenForo require template call." execution_order="10" enabled="1" action="str_replace">
+      <find><![CDATA[</script>]]></find>
+      <replace><![CDATA[$0
+<xen:require css="jrahmy_clickableRows.css" js="js/jrahmy/clickablerows.js" />]]></replace>
+    </modification>
+  </public_template_modifications>
+  <bb_code_media_sites/>
+  <bb_codes/>
+</addon>
