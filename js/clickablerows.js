@@ -78,22 +78,24 @@ var Jrahmy = Jrahmy || {};
          */
         getHref()
         {
-            if (this.type === 'Node') {
-                return this.$rowItem.find('h3.nodeTitle a').first().attr('href');
+            let href;
+
+            switch (this.type) {
+                case 'Discussion':
+                case 'SearchResult':
+                    href = this.$rowItem.find('h3.title a').last().attr('href');
+                    break;
+                case 'Member':
+                    href = this.$rowItem.find('h3.username a').last()
+                        .attr('href');
+                    break;
+                case 'Node':
+                    href = this.$rowItem.find('h3.nodeTitle a').first()
+                        .attr('href');
+                    break;
             }
 
-            if (this.type === 'Discussion') {
-                return this.$rowItem.find('.title a').first()
-                    .attr('href');
-            }
-
-            if (this.type === 'Member') {
-                return this.$rowItem.find('a.username').first().attr('href');
-            }
-
-            if (this.type === 'SearchResult') {
-                 return this.$rowItem.find('h3.title a').first().attr('href');
-            }
+            return href;
         }
 
         /**
