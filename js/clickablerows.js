@@ -66,6 +66,10 @@ var Jrahmy = Jrahmy || {};
                 return 'Node';
             }
 
+            if (this.$rowItem.hasClass('resourceListItem')) {
+                return 'Resource';
+            }
+
             if (this.$rowItem.hasClass('searchResult')) {
                 return 'SearchResult';
             }
@@ -82,6 +86,7 @@ var Jrahmy = Jrahmy || {};
 
             switch (this.type) {
                 case 'Discussion':
+                case 'Resource':
                 case 'SearchResult':
                     href = this.$rowItem.find('h3.title a').last().attr('href');
                     break;
@@ -133,6 +138,7 @@ var Jrahmy = Jrahmy || {};
     XenForo.register('li.discussionListItem', 'Jrahmy.ClickableRow');
     XenForo.register('li.memberListItem',     'Jrahmy.ClickableRow');
     XenForo.register('li.node',               'Jrahmy.ClickableRow');
+    XenForo.register('li.resourceListItem',   'Jrahmy.ClickableRow');
     XenForo.register('li.searchResult',       'Jrahmy.ClickableRow');
 })
 (jQuery, window, document);
