@@ -54,16 +54,16 @@ var Jrahmy = Jrahmy || {};
          */
         getType()
         {
-            if (this.$rowItem.hasClass('node')) {
-                return 'Node';
-            }
-
             if (this.$rowItem.hasClass('discussionListItem')) {
                 return 'Discussion';
             }
 
             if (this.$rowItem.hasClass('memberListItem')) {
                 return 'Member';
+            }
+
+            if (this.$rowItem.hasClass('node')) {
+                return 'Node';
             }
 
             if (this.$rowItem.hasClass('searchResult')) {
@@ -128,9 +128,9 @@ var Jrahmy = Jrahmy || {};
 
     // *********************************************************************
 
-    XenForo.register('li.node',               'Jrahmy.ClickableRow');
     XenForo.register('li.discussionListItem', 'Jrahmy.ClickableRow');
     XenForo.register('li.memberListItem',     'Jrahmy.ClickableRow');
+    XenForo.register('li.node',               'Jrahmy.ClickableRow');
     XenForo.register('li.searchResult',       'Jrahmy.ClickableRow');
 })
 (jQuery, window, document);
