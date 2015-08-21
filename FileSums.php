@@ -27,7 +27,7 @@ class FileSums
     {
         return [
                 'library/Jrahmy/ClickableRows/Listener.php' => '9fc8291303384337334553a4ef80fbcd',
-                'js/jrahmy/clickablerows.js' => '108e6c4d668bfdcc5684b5079a88493e',
+                'js/jrahmy/clickablerows.js' => '2eb71ce154fda813b24211b53cd2135b',
 
         ];
     }
