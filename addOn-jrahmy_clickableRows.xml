@@ -30,16 +30,22 @@
     <template title="jrahmy_clickableRows.css" version_id="300" version_string="3.0.0"><![CDATA[li.node div.nodeInfo:hover,
 li.discussionListItem:hover,
 li.memberListItem:hover,
+li.node div.nodeInfo:hover,
+li.resourceListItem:hover,
 li.searchResult:hover
 {
 	cursor: pointer;
 }
 
-li.node:not(.category) div.nodeInfo:hover,
+
 li.discussionListItem:hover,
-li.discussionListItem:hover .stats,
 li.discussionListItem:hover .posterAvatar,
+li.discussionListItem:hover .stats,
 li.memberListItem:hover,
+li.node:not(.category) div.nodeInfo:hover,
+li.resourceListItem:hover,
+li.resourceListItem:hover .resourceImage,
+li.resourceListItem:hover .resourceStats,
 li.searchResult:hover
 {
 	background-color: {xen:property jrahmy_clickableRows_highlightColor};
