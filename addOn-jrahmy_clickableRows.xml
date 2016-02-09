@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<addon addon_id="jrahmy_clickableRows" title="Clickable Rows" version_string="3.0.3" version_id="303" url="https://xenforo.com/community/resources/clickable-rows.1024/" install_callback_class="" install_callback_method="" uninstall_callback_class="" uninstall_callback_method="">
+<addon addon_id="jrahmy_clickableRows" title="Clickable Rows" version_string="3.0.4" version_id="304" url="https://xenforo.com/community/resources/clickable-rows.1024/" install_callback_class="" install_callback_method="" uninstall_callback_class="" uninstall_callback_method="">
   <admin_navigation/>
   <admin_permissions/>
   <admin_style_properties/>
@@ -27,7 +27,7 @@
     <property property_name="jrahmy_clickableRows_highlightColor" property_type="scalar" definition="1" group_name="general" title="Clickable Rows Highlight Color" description="The color used to highlight a clickable row on mouse-hover." css_components="" scalar_type="color" scalar_parameters="" display_order="410" sub_group=""><![CDATA[@inlineMod]]></property>
   </style_properties>
   <templates>
-    <template title="jrahmy_clickableRows.css" version_id="303" version_string="3.0.3"><![CDATA[li.discussionListItem:hover,
+    <template title="jrahmy_clickableRows.css" version_id="304" version_string="3.0.4"><![CDATA[li.discussionListItem:hover,
 li.memberListItem:hover,
 li.node div.nodeInfo:hover,
 li.resourceListItem:hover,
@@ -46,7 +46,7 @@ li.resourceListItem:hover .resourceImage,
 li.resourceListItem:hover .resourceStats,
 li.searchResult:hover
 {
-	background-color: {xen:property jrahmy_clickableRows_highlightColor};
+	background-color: {xen:property jrahmy_clickableRows_highlightColor} !important;
 	
 }]]></template>
   </templates>
