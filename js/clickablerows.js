@@ -89,7 +89,7 @@ var Jrahmy = Jrahmy || {};
                 case 'Discussion':
                 case 'Resource':
                 case 'SearchResult':
-                    href = this.$rowItem.find('h3.title a').first()
+                    href = this.$rowItem.find('h3.title a:not(.prefixLink,.ReadToggle)').first()
 						.attr('href');
                     break;
                 case 'Member':
