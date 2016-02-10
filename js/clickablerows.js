@@ -6,6 +6,7 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
+"use strict";
 
 /**
  * Create the Jrahmy namespace, if it does not already exist.
@@ -88,7 +89,8 @@ var Jrahmy = Jrahmy || {};
                 case 'Discussion':
                 case 'Resource':
                 case 'SearchResult':
-                    href = this.$rowItem.find('h3.title a').last().attr('href');
+                    href = this.$rowItem.find('h3.title a:not(.prefixLink,.ReadToggle)').last()
+                        .attr('href');
                     break;
                 case 'Member':
                     href = this.$rowItem.find('h3.username a').last()
