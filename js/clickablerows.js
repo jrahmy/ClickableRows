@@ -115,7 +115,7 @@ var Jrahmy = Jrahmy || {};
             let $clickableElement = this.$rowItem;
 
             if (this.type === 'Node') {
-                $clickableElement = this.$rowItem.find('div.nodeInfo').first();
+                $clickableElement = this.$rowItem.find('div.nodeInfo').last();
             }
 
             $clickableElement.click((e) => {
