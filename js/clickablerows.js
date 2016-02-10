@@ -89,7 +89,7 @@ var Jrahmy = Jrahmy || {};
                 case 'Discussion':
                 case 'Resource':
                 case 'SearchResult':
-                    href = this.$rowItem.find('h3.title a:not(.prefixLink,.ReadToggle)').first()
+                    href = this.$rowItem.find('h3.title a:not(.prefixLink,.ReadToggle)').last()
                         .attr('href');
                     break;
                 case 'Member':
@@ -115,7 +115,7 @@ var Jrahmy = Jrahmy || {};
             let $clickableElement = this.$rowItem;
 
             if (this.type === 'Node') {
-                $clickableElement = this.$rowItem.find('div.nodeInfo').last();
+                $clickableElement = this.$rowItem.find('div.nodeInfo').first();
             }
 
             $clickableElement.click((e) => {
