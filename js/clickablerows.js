@@ -1,11 +1,11 @@
 /*
  * This file is part of a XenForo add-on.
  *
- * (c) Jeremy P <http://xenforo.com/community/members/jeremy-p.450/>
+ * (c) Jeremy P <https://xenforo.com/community/members/jeremy-p.450/>
  * (c) Bobby Wibowo <https://xenforo.com/community/members/bobbywibowo.63297/>
  *
- * For the full copyright and license information, please view the LICENSE
- * file that was distributed with this source code.
+ * For the full copyright and license information, please view the LICENSE file
+ * that was distributed with this source code.
  */
 "use strict";
 
